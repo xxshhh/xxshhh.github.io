@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="一直苦恼于 Android Studio + Genymotion 对内存极大的消耗，常常导致电脑内存消耗殆尽，于是只能使用真机调试，可有时又会遇到没带数据线的尴尬，或者是萌生出在电脑上实时操控真机的想法，偶然在网络上get到了一个新技能，最终完美解决。 准备工作在开始上手之前，你需要准备下面的两样工具：    WiFi ADB —— 一款APP获取方法：可以去百度搜索下载该 APP，我是在豌豆荚">
+<meta name="keywords" content="Android,ADB,Vysor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WiFi ADB + Vysor 打造超棒的 Android 真机调试体验">
+<meta property="og:url" content="http://xxshhh.com/2015/09/09/009-wifi-adb-and-vysor/index.html">
+<meta property="og:site_name" content="xxshhh&#39;s blog">
+<meta property="og:description" content="一直苦恼于 Android Studio + Genymotion 对内存极大的消耗，常常导致电脑内存消耗殆尽，于是只能使用真机调试，可有时又会遇到没带数据线的尴尬，或者是萌生出在电脑上实时操控真机的想法，偶然在网络上get到了一个新技能，最终完美解决。 准备工作在开始上手之前，你需要准备下面的两样工具：    WiFi ADB —— 一款APP获取方法：可以去百度搜索下载该 APP，我是在豌豆荚">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/WiFi-ADB.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/Vysor.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-01.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-02.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-03.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-04.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-05.gif">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/google_motion_system.gif">
+<meta property="og:updated_time" content="2018-06-11T15:37:19.396Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="WiFi ADB + Vysor 打造超棒的 Android 真机调试体验">
+<meta name="twitter:description" content="一直苦恼于 Android Studio + Genymotion 对内存极大的消耗，常常导致电脑内存消耗殆尽，于是只能使用真机调试，可有时又会遇到没带数据线的尴尬，或者是萌生出在电脑上实时操控真机的想法，偶然在网络上get到了一个新技能，最终完美解决。 准备工作在开始上手之前，你需要准备下面的两样工具：    WiFi ADB —— 一款APP获取方法：可以去百度搜索下载该 APP，我是在豌豆荚">
+<meta name="twitter:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/WiFi-ADB.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xxshhh's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://xxshhh.com/2015/09/09/009-wifi-adb-and-vysor/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>WiFi ADB + Vysor 打造超棒的 Android 真机调试体验 | xxshhh's blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxshhh's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">细节·态度</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于我</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xxshhh.com/2015/09/09/009-wifi-adb-and-vysor/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小学生辉辉辉">
+      <meta itemprop="description" content="细节决定成败，态度决定一切。">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxshhh's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">WiFi ADB + Vysor 打造超棒的 Android 真机调试体验
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2015-09-09 17:12:02" itemprop="dateCreated datePublished" datetime="2015-09-09T17:12:02+08:00">2015-09-09</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/经验/" itemprop="url" rel="index"><span itemprop="name">经验</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">788</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一直苦恼于 Android Studio + Genymotion 对内存极大的消耗，常常导致电脑内存消耗殆尽，于是只能使用真机调试，可有时又会遇到没带数据线的尴尬，或者是萌生出在电脑上实时操控真机的想法，偶然在网络上get到了一个新技能，最终完美解决。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>在开始上手之前，你需要准备下面的两样工具：  </p>
+<ol>
+<li><p>WiFi ADB —— 一款APP<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/WiFi-ADB.png" alt=""><br>获取方法：可以去百度搜索下载该 APP，我是在豌豆荚找到的。<br>作用：通过 WiFi 来连接 ADB，从此免去数据线的烦恼（前提是：电脑和手机在同一网络下，且手机已 root，即该APP必须获得 root 权限）。  </p>
+</li>
+<li><p>Vysor —— 一款Chrome插件<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/Vysor.png" alt=""><br>获取方法：Chrome 应用商店搜索下载（需FQ）或者网上找离线包下载安装。<br>作用：真正用电脑来控制真机操作，实时投影，两边同时响应操作变化，双向操作，最赞的一点是完全鼠标控制（左键代表手势，右键代表返回，中键代表回到主界面）。  </p>
+<a id="more"></a>
+</li>
+</ol>
+<h1 id="开始上手"><a href="#开始上手" class="headerlink" title="开始上手"></a>开始上手</h1><ol>
+<li>将手机与电脑处于同一网络下。  </li>
+<li>打开手机 WiFi ADB ，并拨动开关。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-01.png" alt="">  </li>
+<li>运行 CMD 命令行程序，建立 ADB 连接（此处需要将 adb.exe 设置为系统环境变量），IP 输入当前所在网络的地址，即上图显示的地址，出现下图的结果即代表连接成功。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-02.png" alt="">  </li>
+<li>运行 Vysor，选择当前已建立连接的手机。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-03.png" alt=""><br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-04.png" alt=""></li>
+<li>到此，所有工作都已完毕，你可以随心所欲的操作手机，调试你在 Android Studio 或者是 Eclipse 下写的 Android 项目了。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-05.gif" alt=""><br>就是这么畅快，一切和用数据线连接真机，操作真机一样~~  </li>
+</ol>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="http://www.jianshu.com/p/8476b829f3d1" target="_blank" rel="noopener">Vysor让你在电脑上完全控制android手机屏幕镜像</a><br><a href="http://www.jianshu.com/p/8be491372397" target="_blank" rel="noopener">Vysor 情怀玩法 （番外篇）</a>  </p>
+<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/google_motion_system.gif" alt=""><br><em>注：图片来自于<a href="https://dribbble.com/shots/2229911-Google-Brand-System-Motion" target="_blank" rel="noopener">Dribbble</a>。</em>  </p>
+<p><em>————————原创文章，未经许可，请勿转载！！！————————</em></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>小学生辉辉辉</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://xxshhh.com/2015/09/09/009-wifi-adb-and-vysor/" title="WiFi ADB + Vysor 打造超棒的 Android 真机调试体验">http://xxshhh.com/2015/09/09/009-wifi-adb-and-vysor/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/ADB/" rel="tag"># ADB</a>
+          
+            <a href="/tags/Vysor/" rel="tag"># Vysor</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/08/12/008-computer-terms/" rel="next" title="收录的计算机术语">
+                <i class="fa fa-chevron-left"></i> 收录的计算机术语
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/09/09/010-mood-diary-20150909/" rel="prev" title="心情日志 —— 2015/09/09">
+                心情日志 —— 2015/09/09 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="小学生辉辉辉" />
+            
+              <p class="site-author-name" itemprop="name">小学生辉辉辉</p>
+              <p class="site-description motion-element" itemprop="description">细节决定成败，态度决定一切。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/xxshhh" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:398279436@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.jianshu.com/u/fbf5826f0781" target="_blank" title="Jianshu"><i class="fa fa-fw fa-book"></i>Jianshu</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/xxshhh" target="_blank" title="CSDN"><i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始上手"><span class="nav-number">2.</span> <span class="nav-text">开始上手</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小学生辉辉辉</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">38k</span>
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

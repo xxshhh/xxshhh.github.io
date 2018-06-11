@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="《Java 编程思想》，原版英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。最近仔细看了这本书，感觉确实是一本经典好书，现打算作此读书笔记整理，随时记录一些阅读过程中发现的技术要点、难点，以便巩固 Java 知识，同时方便以后随时查阅。  Java 编程思想">
+<meta name="keywords" content="读书笔记,Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 编程思想 - 读书笔记">
+<meta property="og:url" content="http://xxshhh.com/2015/09/14/011-thinking-in-java-reading-notes/index.html">
+<meta property="og:site_name" content="xxshhh&#39;s blog">
+<meta property="og:description" content="《Java 编程思想》，原版英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。最近仔细看了这本书，感觉确实是一本经典好书，现打算作此读书笔记整理，随时记录一些阅读过程中发现的技术要点、难点，以便巩固 Java 知识，同时方便以后随时查阅。  Java 编程思想">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/011/Thinking-in-Java.jpg">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/011/container.jpg">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/011/night_dribbble.gif">
+<meta property="og:updated_time" content="2018-06-11T15:37:19.429Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 编程思想 - 读书笔记">
+<meta name="twitter:description" content="《Java 编程思想》，原版英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。最近仔细看了这本书，感觉确实是一本经典好书，现打算作此读书笔记整理，随时记录一些阅读过程中发现的技术要点、难点，以便巩固 Java 知识，同时方便以后随时查阅。  Java 编程思想">
+<meta name="twitter:image" content="http://7xjda2.com1.z0.glb.clouddn.com/011/Thinking-in-Java.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xxshhh's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://xxshhh.com/2015/09/14/011-thinking-in-java-reading-notes/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Java 编程思想 - 读书笔记 | xxshhh's blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxshhh's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">细节·态度</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于我</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xxshhh.com/2015/09/14/011-thinking-in-java-reading-notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小学生辉辉辉">
+      <meta itemprop="description" content="细节决定成败，态度决定一切。">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxshhh's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java 编程思想 - 读书笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2015-09-14 23:37:15" itemprop="dateCreated datePublished" datetime="2015-09-14T23:37:15+08:00">2015-09-14</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书/" itemprop="url" rel="index"><span itemprop="name">读书</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">3.3k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">8 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>《Java 编程思想》，原版英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。最近仔细看了这本书，感觉确实是一本经典好书，现打算作此读书笔记整理，随时记录一些阅读过程中发现的技术要点、难点，以便巩固 Java 知识，同时方便以后随时查阅。</p>
+<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/011/Thinking-in-Java.jpg" alt=""></p>
+<p><center><em>Java 编程思想</em></center><br><a id="more"></a></p>
+<h1 id="1-对象导论"><a href="#1-对象导论" class="headerlink" title="1. 对象导论"></a>1. 对象导论</h1><ul>
+<li>has-a —— 组合，is-a —— 继承。  </li>
+<li>所有可以发送给基类对象的消息同时也可以发送给导出类对象，即导出类与基类具有相同的类型、等价性。  </li>
+<li>把将导出类看作是它的基类的过程称为向上转型（upcasting）。  </li>
+<li>Java 是单根继承结构，终极基类就是 Object。  </li>
+</ul>
+<h1 id="2-一切都是对象"><a href="#2-一切都是对象" class="headerlink" title="2. 一切都是对象"></a>2. 一切都是对象</h1><ul>
+<li>尽管一切都看作是对象，但操纵的标识符实际上是对象的一个“引用”。  </li>
+<li>栈用于存放一些对象引用、基本变量的值，堆用于存放所有的 Java 对象。</li>
+<li>堆不同于栈的好处是：编译器不需要知道存储的数据在堆里存活多长时间。  </li>
+<li>9种基本类型：boolean（不明确）、char（16-bit）、byte（8-bit）、short（16-bit）、int（32-bit）、long（64-bit）、float（32-bit）、double（64-bit）、void（不明确）。（数值类型均有正负号）  </li>
+<li>Java 有一个垃圾回收器，用来监视用 new 创建的所有对象，并辨别那些不会再被引用的对象。  <!-- more --></li>
+<li>方法名和参数列表（一起称为“方法签名”）唯一地标志出某个方法。  </li>
+</ul>
+<h1 id="3-操作符"><a href="#3-操作符" class="headerlink" title="3. 操作符"></a>3. 操作符</h1><ul>
+<li>赋值操作的是一个对象的引用。  </li>
+<li>== 和 ！= 比较的是对象的引用。  </li>
+<li>除非在自己的新类中覆盖 equals() 方法，否则不可能表现出我们希望的行为。  </li>
+<li>以二进制形式显示结果可以使用 Integer 和 Long 类的静态方法 toBinaryString()。  </li>
+<li>移位操作符只可用来处理整数类型（基本类型的一种）。左移位(&lt;&lt;)，低位补0；有符号右移位(&gt;&gt;)，符号扩展（正补0，负补1）；无符号右移位(&gt;&gt;&gt;)，高位补0。  </li>
+</ul>
+<h1 id="4-控制执行流程"><a href="#4-控制执行流程" class="headerlink" title="4. 控制执行流程"></a>4. 控制执行流程</h1><ul>
+<li>Java 里唯一用到逗号操作符（注意不是逗号分隔符）的地方就是 for 循环的控制表达式。  </li>
+<li>return 关键词：一方面指定一个方法返回值，另一方面它会导致当前的方法退出，并返回那个值。  </li>
+<li>在 Java 里需要使用标签的唯一理由就是因为有循环嵌套存在，而且想从多层嵌套中 break 或 continue。  </li>
+<li>switch 语句支持的类型：可以隐式转换到 int 的数据类型（如byte、short、char；long不行），String 类型（1.7以后）以及 Enum 类型。  </li>
+</ul>
+<h1 id="5-初始化与清理"><a href="#5-初始化与清理" class="headerlink" title="5. 初始化与清理"></a>5. 初始化与清理</h1><ul>
+<li>区分重载方法：每一个重载的方法都必须有一个独一无二的参数类型列表。  </li>
+<li>如果已经定义了一个构造器（无论是否有参数），编译器就不会帮你自动创建默认构造器。  </li>
+<li>this 关键字只能在方法内部使用，表示对“调用方法的那个对象”的引用。  </li>
+<li>static 方法就是没有 this 的方法。  </li>
+<li>垃圾回收的特点：1.对象可能不被垃圾回收。 2.垃圾回收并不等于“析构”。 3.垃圾回收只与内存有关。  </li>
+<li>垃圾回收器查找存活对象：从栈和静态存储区开始，遍历所有的引用。就能找到所有“活”的对象。  </li>
+<li>Java 虚拟机会进行监控，如果所有对象都很稳定，垃圾回收器的效率降低的话，就切换到“标记-清扫”方式；同样，Java 虚拟机会跟踪“标记-清扫”的是效果，要是堆空间出现很多碎片，就会切换回“停止-复制”方式。这就是“自适应”技术。—— “自适应的、分代的、停止-复制、标记-清扫”式垃圾回收器。  </li>
+<li>惰性评估，即编译器只在必要的时候才编译代码。  </li>
+</ul>
+<h1 id="6-访问控制权限"><a href="#6-访问控制权限" class="headerlink" title="6. 访问控制权限"></a>6. 访问控制权限</h1><ul>
+<li>访问权限等级由大到小依次为：public、protected、包访问权限和 private。（注意：protected 也提供包访问权限）  </li>
+<li>package 语句，必须是文件中除注释以外的第一句程序代码。  </li>
+<li>把数据和方法包装进类中，以及具体实现的隐藏，常共同被称作封装。  </li>
+<li>类既不可以是 private 的，也不可以是 protected 的。（内部类是特例）  </li>
+</ul>
+<h1 id="7-复用类"><a href="#7-复用类" class="headerlink" title="7. 复用类"></a>7. 复用类</h1><ul>
+<li>使用组合还是继承：是否需要从新类向基类进行向上转型？需要，则继承。  </li>
+<li>对于基本类型，final 使数字恒定不变；而对于对象引用，final 使引用恒定不变  </li>
+<li>使用 final 方法的原因：1.方法锁定，以防任何继承类修改它的含义。2.效率，编译器会将 final 方法的所有调用转为内嵌调用。  </li>
+</ul>
+<h1 id="8-多态"><a href="#8-多态" class="headerlink" title="8. 多态"></a>8. 多态</h1><ul>
+<li>多态，也称作动态绑定、后期绑定或运行时绑定。  </li>
+<li>Java 中除了 static 方法和 final 方法（private 方法属于 final 方法）之外，其他所有的方法都是后期绑定。  </li>
+<li>一条通用的准则是：“用继承表达行为间的差异，并用字段表达状态上的变化”。  </li>
+</ul>
+<h1 id="9-接口"><a href="#9-接口" class="headerlink" title="9. 接口"></a>9. 接口</h1><ul>
+<li>抽象方法，即仅有声明而没有方法体。  </li>
+<li>包含抽象方法的类叫做抽象类。  </li>
+<li>接口的方法只能是抽象的和公开的，且自动的是 public 方法，不能有构造器，可以包含域，但是这些域隐式地是 static 和 final 的。  </li>
+<li>使用接口的核心原因：为了能够向上转型为多个基类型（以及由此而带来的灵活性）。  </li>
+<li>抽象类和接口的区别在于使用动机。使用抽象类是为了代码的复用，而使用接口的动机是为了实现多态性。  </li>
+<li>接口最吸引人的原因之一就是允许同一个接口具有多个不同的具体实现。它的体现形式通常是一个接受接口类型的方法。  </li>
+<li>接口中的任何域都自动是 static 和 final 的，所以接口就成为了一种很便捷的用来创建常量组的工具。（在没有 enum 之前）  </li>
+</ul>
+<h1 id="10-内部类"><a href="#10-内部类" class="headerlink" title="10. 内部类"></a>10. 内部类</h1><ul>
+<li>内部类还拥有其外围类的所有元素的访问权。  </li>
+<li>每个内部类都能独立地继承自一个（接口的）实现，所以无论外围类是否已经继承了某个（接口的）实现，对于内部类都没有影响。  </li>
+<li>内部类生成的 .class 文件的命名规则：外围类的名字，加上 “$”，再加上内部类的名字。（如果是匿名内部类，编译器会简单地产生一个数字作为其标识符）  </li>
+</ul>
+<h1 id="11-持有对象"><a href="#11-持有对象" class="headerlink" title="11. 持有对象"></a>11. 持有对象</h1><ul>
+<li>System.out.print(c)；（c为某个类的对象）该方法将打印类名，后面跟随该对象的散列码的无符号十六进制表示（这个散列码是通过 hashCode() 方法产生的）。  </li>
+<li>迭代器通常被称为轻量级对象：创建它的代价小。  </li>
+<li>Iterator 的真正威力：能够将遍历序列的操作与序列底层的结构分离。或者说，迭代器统一了对容器的访问方式。  </li>
+<li>四种容器：Map、List、Set 和 Queue。<a href="http://www.cnblogs.com/airwindow/archive/2012/06/24/2560196.html" target="_blank" rel="noopener">链接</a><img src="http://7xjda2.com1.z0.glb.clouddn.com/011/container.jpg" alt="">  </li>
+</ul>
+<h1 id="12-通过异常处理错误"><a href="#12-通过异常处理错误" class="headerlink" title="12. 通过异常处理错误"></a>12. 通过异常处理错误</h1><ul>
+<li>同 Java 中其他对象的创建一样，将使用 new 在堆上创建异常对象。  </li>
+<li>Throwable 这个 Java 类被用来表示任何可以作为异常被抛出的类。Throwable 对象可分为两种类型（指从 Throwable 继承而得到的类型）：Error 用来表示编译时和系统错误（除特殊情况外，一般不用你关心）；Exception 是可以被抛出的基本类型，在 Java 类库、用户方法以及运行时故障中都可能抛出 Exception 型异常。  </li>
+<li>finally 子句需要清理的资源：已经打开的文件或网络连接，在屏幕上画的图形，甚至可以是外部世界的某个开关。  </li>
+<li>C++ 和 Java 都是强静态类型语言，即编译时就做类型检查的语言。  </li>
+<li>反射和泛型就是用来补偿静态类型检查所带来的过的限制。  </li>
+<li>至理名言：好的程序设计语言能帮助程序员写出好程序，但无论哪种语言都避免不了程序员用它写出了坏程序。  </li>
+</ul>
+<h1 id="13-···"><a href="#13-···" class="headerlink" title="13. ···"></a>13. ···</h1><p><img src="http://7xjda2.com1.z0.glb.clouddn.com/011/night_dribbble.gif" alt=""><br><em>注：图片来自于<a href="https://dribbble.com/shots/1746509-Queen-s-Room" target="_blank" rel="noopener">Dribbble</a>。</em> </p>
+<p><em>————————原创文章，未经许可，请勿转载！！！————————</em></p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>小学生辉辉辉</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://xxshhh.com/2015/09/14/011-thinking-in-java-reading-notes/" title="Java 编程思想 - 读书笔记">http://xxshhh.com/2015/09/14/011-thinking-in-java-reading-notes/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/读书笔记/" rel="tag"># 读书笔记</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/09/010-mood-diary-20150909/" rel="next" title="心情日志 —— 2015/09/09">
+                <i class="fa fa-chevron-left"></i> 心情日志 —— 2015/09/09
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/15/012-say-goodbye-to-blog/" rel="prev" title="是时候放弃个人独立博客了">
+                是时候放弃个人独立博客了 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="小学生辉辉辉" />
+            
+              <p class="site-author-name" itemprop="name">小学生辉辉辉</p>
+              <p class="site-description motion-element" itemprop="description">细节决定成败，态度决定一切。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/xxshhh" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:398279436@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.jianshu.com/u/fbf5826f0781" target="_blank" title="Jianshu"><i class="fa fa-fw fa-book"></i>Jianshu</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/xxshhh" target="_blank" title="CSDN"><i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-对象导论"><span class="nav-number">1.</span> <span class="nav-text">1. 对象导论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-一切都是对象"><span class="nav-number">2.</span> <span class="nav-text">2. 一切都是对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-操作符"><span class="nav-number">3.</span> <span class="nav-text">3. 操作符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-控制执行流程"><span class="nav-number">4.</span> <span class="nav-text">4. 控制执行流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-初始化与清理"><span class="nav-number">5.</span> <span class="nav-text">5. 初始化与清理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-访问控制权限"><span class="nav-number">6.</span> <span class="nav-text">6. 访问控制权限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-复用类"><span class="nav-number">7.</span> <span class="nav-text">7. 复用类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-多态"><span class="nav-number">8.</span> <span class="nav-text">8. 多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-接口"><span class="nav-number">9.</span> <span class="nav-text">9. 接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-内部类"><span class="nav-number">10.</span> <span class="nav-text">10. 内部类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#11-持有对象"><span class="nav-number">11.</span> <span class="nav-text">11. 持有对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#12-通过异常处理错误"><span class="nav-number">12.</span> <span class="nav-text">12. 通过异常处理错误</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#13-···"><span class="nav-number">13.</span> <span class="nav-text">13. ···</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小学生辉辉辉</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">38k</span>
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

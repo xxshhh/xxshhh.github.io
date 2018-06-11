@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=6.3.0">
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="官方网站就是最好的学习资料，没有之一。 Android Developers 系列持续更新中，详见 GitHub。  Introduction - 入门说在前面由于官网并没有介绍 Android 的发展历史，故从维基百科、百度百科等多方位整理了一些东西，以便更好的认识 Android。">
+<meta name="keywords" content="Android,Android Developers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Developers 系列 01 - Introduction">
+<meta property="og:url" content="http://xxshhh.com/2017/09/06/016-android-developers-01-introduction/index.html">
+<meta property="og:site_name" content="xxshhh&#39;s blog">
+<meta property="og:description" content="官方网站就是最好的学习资料，没有之一。 Android Developers 系列持续更新中，详见 GitHub。  Introduction - 入门说在前面由于官网并没有介绍 Android 的发展历史，故从维基百科、百度百科等多方位整理了一些东西，以便更好的认识 Android。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_robot_2014.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_logo_2014.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/htc_g1.jpg">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/2_billion_monthly_active_devices.jpg">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_version_list.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_platform_distribution_20170808.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_wear.jpg">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_tv.jpg">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_auto.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/chrome_os.png">
+<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_things.jpg">
+<meta property="og:updated_time" content="2018-06-11T15:37:19.551Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android Developers 系列 01 - Introduction">
+<meta name="twitter:description" content="官方网站就是最好的学习资料，没有之一。 Android Developers 系列持续更新中，详见 GitHub。  Introduction - 入门说在前面由于官网并没有介绍 Android 的发展历史，故从维基百科、百度百科等多方位整理了一些东西，以便更好的认识 Android。">
+<meta name="twitter:image" content="http://7xjda2.com1.z0.glb.clouddn.com/016/android_robot_2014.png">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="xxshhh's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://xxshhh.com/2017/09/06/016-android-developers-01-introduction/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Android Developers 系列 01 - Introduction | xxshhh's blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxshhh's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">细节·态度</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于我</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xxshhh.com/2017/09/06/016-android-developers-01-introduction/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小学生辉辉辉">
+      <meta itemprop="description" content="细节决定成败，态度决定一切。">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxshhh's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android Developers 系列 01 - Introduction
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-09-06 21:46:00" itemprop="dateCreated datePublished" datetime="2017-09-06T21:46:00+08:00">2017-09-06</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/经验/" itemprop="url" rel="index"><span itemprop="name">经验</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">1.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">5 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p><strong>官方网站就是最好的学习资料，没有之一。</strong></p>
+<p>Android Developers 系列持续更新中，详见 <a href="https://github.com/xxshhh/Android-Developers" target="_blank" rel="noopener">GitHub</a>。</p>
+</blockquote>
+<h1 id="Introduction-入门"><a href="#Introduction-入门" class="headerlink" title="Introduction - 入门"></a>Introduction - 入门</h1><h2 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h2><p>由于官网并没有介绍 Android 的发展历史，故从维基百科、百度百科等多方位整理了一些东西，以便更好的认识 Android。<br><a id="more"></a></p>
+<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/android_robot_2014.png" alt="android_robot_2014"></p>
+<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/android_logo_2014.png" alt="android_logo_2014"></p>
+<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/htc_g1.jpg" alt="htc_g1"></p>
+<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/2_billion_monthly_active_devices.jpg" alt="2_billion_monthly_active_devices"></p>
+<ul>
+<li>Android 是一个基于 <strong>Linux 内核</strong>的<strong>开放源代码移动操作系统</strong>。</li>
+<li>Android 标志是一个全身绿色的机器人，颜色在 RGB 中十六进制代码为 <strong>#A4C639</strong>。</li>
+<li>2003年10月，有“Android之父”之称的 <strong>Andy Rubin</strong> 等人创建了 Android 科技公司；2005年7月11日，Google 收购了 Android 科技公司；2007年11月，在 Google 的领导下，<strong>开放手持设备联盟</strong>（Open Handset Alliance） 成立。</li>
+<li><strong>2008年9月</strong>，世界上第一款使用 Google Android 操作系统的商业性手机产品 <strong>HTC G1</strong> 推出，由美国运营商 T-Mobile USA 定制，HTC 代工生产。</li>
+<li>Google I/O 2017 开发者大会已经宣布，安卓月活跃设备已经达到<strong>20亿</strong>。</li>
+</ul>
+<h2 id="官网介绍"><a href="#官网介绍" class="headerlink" title="官网介绍"></a>官网介绍</h2><p>官方在首页的入门介绍主要分为六个部分：Android、Wear、TV、Auto、Chrome OS、Things。此处重点介绍 Android 部分，其余部分简单带过。</p>
+<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/android_version_list.png" alt="android_version_list"></p>
+<p>Android 操作系统的版本历史：</p>
+<p><em>注：此处记录的是那些有更新 API 的版本。</em></p>
+<ul>
+<li>Android 1.0 - API 1</li>
+<li>Android 1.1 - API 2</li>
+<li>Android 1.5 - Cupcake 纸杯蛋糕 - API 3</li>
+<li>Android 1.6 - Donut 甜甜圈 - API 4</li>
+<li>Android 2.0, 2.0.1, 2.1 - Eclair 松饼 - API 5, 6, 7</li>
+<li>Android 2.2 - Froyo 冻酸奶 - API 8</li>
+<li>Android 2.3, 2.3.3 - Gingerbread 姜饼 - API 9, 10</li>
+<li>Android 3.0, 3.1, 3.2 - Honeycomb 蜂巢 - API 11, 12, 13</li>
+<li>Android 4.0, 4.0.3 - Ice Cream Sandwich 冰淇淋三明治 - API 14, 15</li>
+<li>Android 4.1, 4.2, 4.3 - Jelly Bean 果冻豆 - API 16, 17, 18</li>
+<li>Android 4.4, 4.4W - KitKat 奇巧 - API 19, 20</li>
+<li>Android 5.0, 5.1 - Lollipop 棒棒糖 - API 21, 22</li>
+<li>Android 6.0 - Marshmallow 棉花糖 - API 23</li>
+<li>Android 7.0, 7.1.1 - Nougat 牛轧糖 - API 24, 25</li>
+<li>Android 8.0 - Oreo 奥利奥 - API 26</li>
+</ul>
+<p>Android 版本分布：</p>
+<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/android_platform_distribution_20170808.png" alt="android_platform_distribution_20170808"></p>
+<p>一些重要版本特性：</p>
+<ul>
+<li>8.0 特性：通知、画中画、自动填充、自适应图标等。</li>
+<li>7.0 特性：多窗口UI、直接回复通知、VR支持等；7.1 增加了应用快捷方式。</li>
+<li>6.0 特性：运行时权限、指纹身份验证、低电耗模式和应用待机模式省电功能等。</li>
+<li>5.0 特性：Material Design、ART运行时、支持64位架构、支持Android TV和Auto等，官方评价为<strong>”迄今为止功能最丰富并且最富雄心的 Android 版本！“</strong>；5.1 增加了多SIM卡支持。</li>
+<li>4.4 特性：全屏模式、透明系统UI样式、NFC支付等；4.4W 增加Android Wear支持。</li>
+</ul>
+<h3 id="Wear"><a href="#Wear" class="headerlink" title="Wear"></a>Wear</h3><p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/android_wear.jpg" alt="android_wear"></p>
+<p>Android Wear 将 Android 平台拓展至可穿戴设备，简洁、易懂、并且微互动。</p>
+<h3 id="TV"><a href="#TV" class="headerlink" title="TV"></a>TV</h3><p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/android_tv.jpg" alt="android_tv"></p>
+<p>Android TV 提供大屏幕的应用、游戏和内容，提升浏览效率。</p>
+<h3 id="Auto"><a href="#Auto" class="headerlink" title="Auto"></a>Auto</h3><p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/android_auto.png" alt="android_auto"></p>
+<p>Android Auto 通过更大的触控目标，简化的界面和易于使用的语音操作，它旨在尽量减少分心，让您可以专注于道路上。</p>
+<h3 id="Chrome-OS"><a href="#Chrome-OS" class="headerlink" title="Chrome OS"></a>Chrome OS</h3><p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/chrome_os.png" alt="chrome_os"></p>
+<p>Chrome OS 是一个为上网本设计的轻量级开源操作系统。</p>
+<h3 id="Things"><a href="#Things" class="headerlink" title="Things"></a>Things</h3><p><img src="http://7xjda2.com1.z0.glb.clouddn.com/016/android_things.jpg" alt="android_things"></p>
+<p>Android Things 是 Google 面向物联网设备市场推出的系统。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>小学生辉辉辉</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://xxshhh.com/2017/09/06/016-android-developers-01-introduction/" title="Android Developers 系列 01 - Introduction">http://xxshhh.com/2017/09/06/016-android-developers-01-introduction/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/Android-Developers/" rel="tag"># Android Developers</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/22/015-play-markdown/" rel="next" title="玩转Markdown">
+                <i class="fa fa-chevron-left"></i> 玩转Markdown
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="小学生辉辉辉" />
+            
+              <p class="site-author-name" itemprop="name">小学生辉辉辉</p>
+              <p class="site-description motion-element" itemprop="description">细节决定成败，态度决定一切。</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/xxshhh" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:398279436@qq.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.jianshu.com/u/fbf5826f0781" target="_blank" title="Jianshu"><i class="fa fa-fw fa-book"></i>Jianshu</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://blog.csdn.net/xxshhh" target="_blank" title="CSDN"><i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction-入门"><span class="nav-number">1.</span> <span class="nav-text">Introduction - 入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#说在前面"><span class="nav-number">1.1.</span> <span class="nav-text">说在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#官网介绍"><span class="nav-number">1.2.</span> <span class="nav-text">官网介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android"><span class="nav-number">1.2.1.</span> <span class="nav-text">Android</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Wear"><span class="nav-number">1.2.2.</span> <span class="nav-text">Wear</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TV"><span class="nav-number">1.2.3.</span> <span class="nav-text">TV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto"><span class="nav-number">1.2.4.</span> <span class="nav-text">Auto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome-OS"><span class="nav-number">1.2.5.</span> <span class="nav-text">Chrome OS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Things"><span class="nav-number">1.2.6.</span> <span class="nav-text">Things</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小学生辉辉辉</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数：</span>
+    
+    <span title="站点总字数">38k</span>
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

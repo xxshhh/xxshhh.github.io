@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>xxshhh&#39;s blog</title>
+  
+  <subtitle>细节·态度</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://xxshhh.com/"/>
+  <updated>2018-06-11T15:37:19.551Z</updated>
+  <id>http://xxshhh.com/</id>
+  
+  <author>
+    <name>小学生辉辉辉</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android Developers 系列 01 - Introduction</title>
+    <link href="http://xxshhh.com/2017/09/06/016-android-developers-01-introduction/"/>
+    <id>http://xxshhh.com/2017/09/06/016-android-developers-01-introduction/</id>
+    <published>2017-09-06T13:46:00.000Z</published>
+    <updated>2018-06-11T15:37:19.551Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;官方网站就是最好的学习资料，没有之一。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Android Developers 系列持续更新中，详见 &lt;a href=&quot;https://github.com/xxshhh/Android-Developers&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Introduction-入门&quot;&gt;&lt;a href=&quot;#Introduction-入门&quot; class=&quot;headerlink&quot; title=&quot;Introduction - 入门&quot;&gt;&lt;/a&gt;Introduction - 入门&lt;/h1&gt;&lt;h2 id=&quot;说在前面&quot;&gt;&lt;a href=&quot;#说在前面&quot; class=&quot;headerlink&quot; title=&quot;说在前面&quot;&gt;&lt;/a&gt;说在前面&lt;/h2&gt;&lt;p&gt;由于官网并没有介绍 Android 的发展历史，故从维基百科、百度百科等多方位整理了一些东西，以便更好的认识 Android。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="Android" scheme="http://xxshhh.com/tags/Android/"/>
+    
+      <category term="Android Developers" scheme="http://xxshhh.com/tags/Android-Developers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>玩转Markdown</title>
+    <link href="http://xxshhh.com/2017/08/22/015-play-markdown/"/>
+    <id>http://xxshhh.com/2017/08/22/015-play-markdown/</id>
+    <published>2017-08-22T15:02:19.000Z</published>
+    <updated>2018-06-11T15:37:19.510Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;Markdown 作为当前最流行的写作工具之一，无处不在使用，如 GitHub、CSDN、简书、Hexo 静态博客等，故细心整理一番，一起玩转 Markdown。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Markdown-Syntax&quot;&gt;&lt;a href=&quot;#Markdown-Syntax&quot; class=&quot;headerlink&quot; title=&quot;Markdown Syntax&quot;&gt;&lt;/a&gt;Markdown Syntax&lt;/h2&gt;&lt;p&gt;&lt;em&gt;Markdown 是一种轻量级标记语言。&lt;/em&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="写作" scheme="http://xxshhh.com/tags/%E5%86%99%E4%BD%9C/"/>
+    
+      <category term="Markdown" scheme="http://xxshhh.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两张图让你完全了解IDEA和Android Studio所有快捷键</title>
+    <link href="http://xxshhh.com/2017/03/28/014-idea-and-android-studio-shortcuts/"/>
+    <id>http://xxshhh.com/2017/03/28/014-idea-and-android-studio-shortcuts/</id>
+    <published>2017-03-27T16:51:19.000Z</published>
+    <updated>2018-06-11T15:37:19.491Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;IDEA、Android Studio —— 分别作为 Java 开发者、Android 开发者最受欢迎的开发工具，且后者是基于前者开发的，所以它们的快捷键是一样的。&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;官方完整文档&quot;&gt;&lt;a href=&quot;#官方完整文档&quot; class=&quot;headerlink&quot; title=&quot;官方完整文档&quot;&gt;&lt;/a&gt;官方完整文档&lt;/h1&gt;&lt;p&gt;偶然发现 JetBrains 公司官网已经提供了一份完整的 &lt;a href=&quot;https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;IntelliJ IDEA 快捷键文档&lt;/a&gt;，所以以后再也不用搜索各种快捷键了，下面的两张图就能让你完全了解 IDEA 和 Android Studio 所有快捷键（那些深颜色的就是常用的）。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="IDEA" scheme="http://xxshhh.com/tags/IDEA/"/>
+    
+      <category term="Android Studio" scheme="http://xxshhh.com/tags/Android-Studio/"/>
+    
+      <category term="快捷键" scheme="http://xxshhh.com/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ADB命令最全总结</title>
+    <link href="http://xxshhh.com/2017/03/15/013-adb-summary/"/>
+    <id>http://xxshhh.com/2017/03/15/013-adb-summary/</id>
+    <published>2017-03-14T16:21:55.000Z</published>
+    <updated>2018-06-11T15:37:19.459Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;Android Debug Bridge (Android 调试桥) 是一个通用命令行工具，其允许您与模拟器实例或连接的 Android 设备进行通信。&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&quot;adb-通用命令格式&quot;&gt;&lt;a href=&quot;#adb-通用命令格式&quot; class=&quot;headerlink&quot; title=&quot;adb 通用命令格式&quot;&gt;&lt;/a&gt;adb 通用命令格式&lt;/h1&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;adb [-d|-e|-s serial_number] command&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="Android" scheme="http://xxshhh.com/tags/Android/"/>
+    
+      <category term="ADB" scheme="http://xxshhh.com/tags/ADB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于我</title>
+    <link href="http://xxshhh.com/2017/02/14/000-about-me/"/>
+    <id>http://xxshhh.com/2017/02/14/000-about-me/</id>
+    <published>2017-02-14T15:59:16.000Z</published>
+    <updated>2018-06-11T15:37:19.238Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;很久就想写一个关于自己的介绍，从我第一次建立个人站点（xuwenhui.net）时就有想法了，但迟迟不敢写，也不知从何下笔。于是乎，拖到了现在，这不，趁着本命年刚打的鸡血，再加上2月14日这么一个富有仪式感的日子，就这样开始了一段自我认识之旅。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/000/xxshhh.jpeg&quot; alt=&quot;小时候&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;小时候&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="心情" scheme="http://xxshhh.com/categories/%E5%BF%83%E6%83%85/"/>
+    
+    
+      <category term="关于我" scheme="http://xxshhh.com/tags/%E5%85%B3%E4%BA%8E%E6%88%91/"/>
+    
+      <category term="自我认识" scheme="http://xxshhh.com/tags/%E8%87%AA%E6%88%91%E8%AE%A4%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>是时候放弃个人独立博客了</title>
+    <link href="http://xxshhh.com/2016/11/15/012-say-goodbye-to-blog/"/>
+    <id>http://xxshhh.com/2016/11/15/012-say-goodbye-to-blog/</id>
+    <published>2016-11-14T17:24:11.000Z</published>
+    <updated>2018-06-11T15:37:19.444Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;是时候放弃个人独立博客了~~&lt;/em&gt;&lt;br&gt;&lt;em&gt;嗯，就这样搬新家了。&lt;/em&gt;&lt;br&gt;&lt;em&gt;但是人还是熟悉的那个人，&lt;/em&gt;&lt;br&gt;&lt;em&gt;也可能变得更好了！&lt;/em&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/012/blog.png&quot; alt=&quot;我的旧博客&quot;&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;我的旧博客&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="心情" scheme="http://xxshhh.com/categories/%E5%BF%83%E6%83%85/"/>
+    
+    
+      <category term="博客" scheme="http://xxshhh.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="写作" scheme="http://xxshhh.com/tags/%E5%86%99%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java 编程思想 - 读书笔记</title>
+    <link href="http://xxshhh.com/2015/09/14/011-thinking-in-java-reading-notes/"/>
+    <id>http://xxshhh.com/2015/09/14/011-thinking-in-java-reading-notes/</id>
+    <published>2015-09-14T15:37:15.000Z</published>
+    <updated>2018-06-11T15:37:19.429Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;《Java 编程思想》，原版英文书为《Thinking in Java》，全书800多页的容量，基本覆盖了所有的 Java 知识（包括那些高级特性），该书也赢得了全球程序员的广泛赞誉。最近仔细看了这本书，感觉确实是一本经典好书，现打算作此读书笔记整理，随时记录一些阅读过程中发现的技术要点、难点，以便巩固 Java 知识，同时方便以后随时查阅。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/011/Thinking-in-Java.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;Java 编程思想&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="读书" scheme="http://xxshhh.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="读书笔记" scheme="http://xxshhh.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Java" scheme="http://xxshhh.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>心情日志 —— 2015/09/09</title>
+    <link href="http://xxshhh.com/2015/09/09/010-mood-diary-20150909/"/>
+    <id>http://xxshhh.com/2015/09/09/010-mood-diary-20150909/</id>
+    <published>2015-09-09T13:00:00.000Z</published>
+    <updated>2018-06-11T15:37:19.412Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2015/09/09 Wed 武汉 26℃ 多云&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/010/fighting.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;奋斗&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="心情" scheme="http://xxshhh.com/categories/%E5%BF%83%E6%83%85/"/>
+    
+    
+      <category term="博客" scheme="http://xxshhh.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="心情日志" scheme="http://xxshhh.com/tags/%E5%BF%83%E6%83%85%E6%97%A5%E5%BF%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WiFi ADB + Vysor 打造超棒的 Android 真机调试体验</title>
+    <link href="http://xxshhh.com/2015/09/09/009-wifi-adb-and-vysor/"/>
+    <id>http://xxshhh.com/2015/09/09/009-wifi-adb-and-vysor/</id>
+    <published>2015-09-09T09:12:02.000Z</published>
+    <updated>2018-06-11T15:37:19.396Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一直苦恼于 Android Studio + Genymotion 对内存极大的消耗，常常导致电脑内存消耗殆尽，于是只能使用真机调试，可有时又会遇到没带数据线的尴尬，或者是萌生出在电脑上实时操控真机的想法，偶然在网络上get到了一个新技能，最终完美解决。&lt;/p&gt;
+&lt;h1 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h1&gt;&lt;p&gt;在开始上手之前，你需要准备下面的两样工具：  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;WiFi ADB —— 一款APP&lt;br&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/009/WiFi-ADB.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;获取方法：可以去百度搜索下载该 APP，我是在豌豆荚找到的。&lt;br&gt;作用：通过 WiFi 来连接 ADB，从此免去数据线的烦恼（前提是：电脑和手机在同一网络下，且手机已 root，即该APP必须获得 root 权限）。  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Vysor —— 一款Chrome插件&lt;br&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/009/Vysor.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;获取方法：Chrome 应用商店搜索下载（需FQ）或者网上找离线包下载安装。&lt;br&gt;作用：真正用电脑来控制真机操作，实时投影，两边同时响应操作变化，双向操作，最赞的一点是完全鼠标控制（左键代表手势，右键代表返回，中键代表回到主界面）。  &lt;/p&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="Android" scheme="http://xxshhh.com/tags/Android/"/>
+    
+      <category term="ADB" scheme="http://xxshhh.com/tags/ADB/"/>
+    
+      <category term="Vysor" scheme="http://xxshhh.com/tags/Vysor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>收录的计算机术语</title>
+    <link href="http://xxshhh.com/2015/08/12/008-computer-terms/"/>
+    <id>http://xxshhh.com/2015/08/12/008-computer-terms/</id>
+    <published>2015-08-12T10:45:24.000Z</published>
+    <updated>2018-06-11T15:37:19.378Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有感于自己糟糕的英语，现收录一些计算机方面的术语，以后看到会不定期补充进来，时不时可以翻阅一下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/008/english.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;English&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="计算机术语" scheme="http://xxshhh.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AF%E8%AF%AD/"/>
+    
+      <category term="英语" scheme="http://xxshhh.com/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 使用 Web Service 进行网络编程</title>
+    <link href="http://xxshhh.com/2015/08/12/007-android-webservice/"/>
+    <id>http://xxshhh.com/2015/08/12/007-android-webservice/</id>
+    <published>2015-08-12T02:49:59.000Z</published>
+    <updated>2018-06-11T15:37:19.360Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在实习项目中需要用到 Web Service 进行后台网络通讯，期间遇到了不少的问题，现在，项目也差不多做完了，故总结一下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/007/w3school-ws.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;Web Service&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="代码" scheme="http://xxshhh.com/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://xxshhh.com/tags/Android/"/>
+    
+      <category term="Web Service" scheme="http://xxshhh.com/tags/Web-Service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序员必读经典书籍</title>
+    <link href="http://xxshhh.com/2015/07/28/006-books-programmer-should-read/"/>
+    <id>http://xxshhh.com/2015/07/28/006-books-programmer-should-read/</id>
+    <published>2015-07-28T11:41:16.000Z</published>
+    <updated>2018-06-11T15:37:19.344Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;What is the single most influential book every programmer should read?  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是一个在&lt;a href=&quot;http://stackoverflow.com/questions/1711/what-is-the-single-most-influential-book-every-programmer-should-read?page=1&amp;amp;tab=votes#tab-top&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;stackoverflow&lt;/a&gt;上的问题，借此问题，也就衍生出了许许多多关于程序员必读的一些经典书籍的书单。  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/006/reading.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;读书&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="读书" scheme="http://xxshhh.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="书单" scheme="http://xxshhh.com/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+      <category term="程序员" scheme="http://xxshhh.com/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 基础知识总结</title>
+    <link href="http://xxshhh.com/2015/07/01/005-android-summary/"/>
+    <id>http://xxshhh.com/2015/07/01/005-android-summary/</id>
+    <published>2015-07-01T10:44:39.000Z</published>
+    <updated>2018-06-11T15:37:19.327Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;以“一问一答”的形式总结记录自己在android学习过程中的重要知识点，让知识更清晰，便于记忆与理解，也有助于以后各种android相关的笔试、面试。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/005/android.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;Android&lt;/em&gt;&lt;/center&gt;&lt;br&gt;&lt;em&gt;主要是参考了李刚老师的《Android疯狂讲义》总结的android基础知识。&lt;/em&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="代码" scheme="http://xxshhh.com/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="Android" scheme="http://xxshhh.com/tags/Android/"/>
+    
+      <category term="知识点" scheme="http://xxshhh.com/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>玩转hexo</title>
+    <link href="http://xxshhh.com/2015/06/24/004-play-hexo/"/>
+    <id>http://xxshhh.com/2015/06/24/004-play-hexo/</id>
+    <published>2015-06-24T03:01:55.000Z</published>
+    <updated>2018-06-11T15:37:19.311Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近浏览了一些基于hexo的博客，发现了许许多多好玩的东西，故收藏整理之，教你玩转hexo！！！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/004/hexo-github.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;hexo&lt;/em&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;em&gt;我一直觉得，把静态博客玩转成动态博客，才有意思。&lt;/em&gt;&lt;br&gt;还好，如今的互联网是如此开放与便利，这些都不是事儿，只要你敢想~~&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="博客" scheme="http://xxshhh.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Hexo" scheme="http://xxshhh.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>蓝桥杯比赛算法总结</title>
+    <link href="http://xxshhh.com/2015/06/18/003-lanqiao-algorithm-summary/"/>
+    <id>http://xxshhh.com/2015/06/18/003-lanqiao-algorithm-summary/</id>
+    <published>2015-06-18T14:35:24.000Z</published>
+    <updated>2018-06-11T15:37:19.293Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天突然想把我自己在蓝桥杯比赛时准备的一些算法记录下来，以便翻阅。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/003/lanqiao.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;蓝桥杯官网&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="代码" scheme="http://xxshhh.com/categories/%E4%BB%A3%E7%A0%81/"/>
+    
+    
+      <category term="蓝桥杯" scheme="http://xxshhh.com/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/"/>
+    
+      <category term="算法" scheme="http://xxshhh.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>整理的学习网站</title>
+    <link href="http://xxshhh.com/2015/06/08/002-sorting-learning-website/"/>
+    <id>http://xxshhh.com/2015/06/08/002-sorting-learning-website/</id>
+    <published>2015-06-08T02:00:26.000Z</published>
+    <updated>2018-06-11T15:37:19.276Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;整理一些自己觉得实用的网站，主要是和技术相关。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/002/programmer.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;程序员&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="网站" scheme="http://xxshhh.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+      <category term="学习" scheme="http://xxshhh.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于博客</title>
+    <link href="http://xxshhh.com/2015/05/30/001-about-blog/"/>
+    <id>http://xxshhh.com/2015/05/30/001-about-blog/</id>
+    <published>2015-05-30T07:53:25.000Z</published>
+    <updated>2018-06-11T15:37:19.258Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;花了几天时间，终于成功搭建了我的独立博客~~~喜o(∩_∩)o&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://7xjda2.com1.z0.glb.clouddn.com/001/my-blog.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;em&gt;手机端截图&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="心情" scheme="http://xxshhh.com/categories/%E5%BF%83%E6%83%85/"/>
+    
+    
+      <category term="博客" scheme="http://xxshhh.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="Hexo" scheme="http://xxshhh.com/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
