@@ -112,19 +112,19 @@
 <meta property="og:site_name" content="xxshhh&#39;s blog">
 <meta property="og:description" content="一直苦恼于 Android Studio + Genymotion 对内存极大的消耗，常常导致电脑内存消耗殆尽，于是只能使用真机调试，可有时又会遇到没带数据线的尴尬，或者是萌生出在电脑上实时操控真机的想法，偶然在网络上get到了一个新技能，最终完美解决。 准备工作在开始上手之前，你需要准备下面的两样工具：    WiFi ADB —— 一款APP获取方法：可以去百度搜索下载该 APP，我是在豌豆荚">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/WiFi-ADB.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/Vysor.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-01.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-02.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-03.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-04.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-05.gif">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/google_motion_system.gif">
-<meta property="og:updated_time" content="2018-06-11T15:37:19.396Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/WiFi-ADB.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/Vysor.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-01.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-02.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-03.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-04.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-05.gif">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/google_motion_system.gif">
+<meta property="og:updated_time" content="2019-03-28T04:21:40.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WiFi ADB + Vysor 打造超棒的 Android 真机调试体验">
 <meta name="twitter:description" content="一直苦恼于 Android Studio + Genymotion 对内存极大的消耗，常常导致电脑内存消耗殆尽，于是只能使用真机调试，可有时又会遇到没带数据线的尴尬，或者是萌生出在电脑上实时操控真机的想法，偶然在网络上get到了一个新技能，最终完美解决。 准备工作在开始上手之前，你需要准备下面的两样工具：    WiFi ADB —— 一款APP获取方法：可以去百度搜索下载该 APP，我是在豌豆荚">
-<meta name="twitter:image" content="http://7xjda2.com1.z0.glb.clouddn.com/009/WiFi-ADB.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/WiFi-ADB.png">
 
 
 
@@ -433,21 +433,21 @@
         <p>一直苦恼于 Android Studio + Genymotion 对内存极大的消耗，常常导致电脑内存消耗殆尽，于是只能使用真机调试，可有时又会遇到没带数据线的尴尬，或者是萌生出在电脑上实时操控真机的想法，偶然在网络上get到了一个新技能，最终完美解决。</p>
 <h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>在开始上手之前，你需要准备下面的两样工具：  </p>
 <ol>
-<li><p>WiFi ADB —— 一款APP<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/WiFi-ADB.png" alt=""><br>获取方法：可以去百度搜索下载该 APP，我是在豌豆荚找到的。<br>作用：通过 WiFi 来连接 ADB，从此免去数据线的烦恼（前提是：电脑和手机在同一网络下，且手机已 root，即该APP必须获得 root 权限）。  </p>
+<li><p>WiFi ADB —— 一款APP<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/WiFi-ADB.png" alt=""><br>获取方法：可以去百度搜索下载该 APP，我是在豌豆荚找到的。<br>作用：通过 WiFi 来连接 ADB，从此免去数据线的烦恼（前提是：电脑和手机在同一网络下，且手机已 root，即该APP必须获得 root 权限）。  </p>
 </li>
-<li><p>Vysor —— 一款Chrome插件<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/Vysor.png" alt=""><br>获取方法：Chrome 应用商店搜索下载（需FQ）或者网上找离线包下载安装。<br>作用：真正用电脑来控制真机操作，实时投影，两边同时响应操作变化，双向操作，最赞的一点是完全鼠标控制（左键代表手势，右键代表返回，中键代表回到主界面）。  </p>
+<li><p>Vysor —— 一款Chrome插件<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/Vysor.png" alt=""><br>获取方法：Chrome 应用商店搜索下载（需FQ）或者网上找离线包下载安装。<br>作用：真正用电脑来控制真机操作，实时投影，两边同时响应操作变化，双向操作，最赞的一点是完全鼠标控制（左键代表手势，右键代表返回，中键代表回到主界面）。  </p>
 <a id="more"></a>
 </li>
 </ol>
 <h1 id="开始上手"><a href="#开始上手" class="headerlink" title="开始上手"></a>开始上手</h1><ol>
 <li>将手机与电脑处于同一网络下。  </li>
-<li>打开手机 WiFi ADB ，并拨动开关。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-01.png" alt="">  </li>
-<li>运行 CMD 命令行程序，建立 ADB 连接（此处需要将 adb.exe 设置为系统环境变量），IP 输入当前所在网络的地址，即上图显示的地址，出现下图的结果即代表连接成功。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-02.png" alt="">  </li>
-<li>运行 Vysor，选择当前已建立连接的手机。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-03.png" alt=""><br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-04.png" alt=""></li>
-<li>到此，所有工作都已完毕，你可以随心所欲的操作手机，调试你在 Android Studio 或者是 Eclipse 下写的 Android 项目了。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/screenshot-05.gif" alt=""><br>就是这么畅快，一切和用数据线连接真机，操作真机一样~~  </li>
+<li>打开手机 WiFi ADB ，并拨动开关。<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-01.png" alt="">  </li>
+<li>运行 CMD 命令行程序，建立 ADB 连接（此处需要将 adb.exe 设置为系统环境变量），IP 输入当前所在网络的地址，即上图显示的地址，出现下图的结果即代表连接成功。<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-02.png" alt="">  </li>
+<li>运行 Vysor，选择当前已建立连接的手机。<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-03.png" alt=""><br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-04.png" alt=""></li>
+<li>到此，所有工作都已完毕，你可以随心所欲的操作手机，调试你在 Android Studio 或者是 Eclipse 下写的 Android 项目了。<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/screenshot-05.gif" alt=""><br>就是这么畅快，一切和用数据线连接真机，操作真机一样~~  </li>
 </ol>
 <h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="http://www.jianshu.com/p/8476b829f3d1" target="_blank" rel="noopener">Vysor让你在电脑上完全控制android手机屏幕镜像</a><br><a href="http://www.jianshu.com/p/8be491372397" target="_blank" rel="noopener">Vysor 情怀玩法 （番外篇）</a>  </p>
-<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/009/google_motion_system.gif" alt=""><br><em>注：图片来自于<a href="https://dribbble.com/shots/2229911-Google-Brand-System-Motion" target="_blank" rel="noopener">Dribbble</a>。</em>  </p>
+<p><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/009/google_motion_system.gif" alt=""><br><em>注：图片来自于<a href="https://dribbble.com/shots/2229911-Google-Brand-System-Motion" target="_blank" rel="noopener">Dribbble</a>。</em>  </p>
 <p><em>————————原创文章，未经许可，请勿转载！！！————————</em></p>
 
       
@@ -763,7 +763,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>

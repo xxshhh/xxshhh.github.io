@@ -112,18 +112,18 @@
 <meta property="og:site_name" content="xxshhh&#39;s blog">
 <meta property="og:description" content="以“一问一答”的形式总结记录自己在android学习过程中的重要知识点，让知识更清晰，便于记忆与理解，也有助于以后各种android相关的笔试、面试。  Android主要是参考了李刚老师的《Android疯狂讲义》总结的android基础知识。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/005/android.jpg">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/005/android-architecture.jpg">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/005/view-class.jpg">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/005/activity-lifecycle.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/005/fragment-lifecycle.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/005/activity-fragment-lifecycle.png">
-<meta property="og:image" content="http://7xjda2.com1.z0.glb.clouddn.com/005/01_egypt_dribbble.gif">
-<meta property="og:updated_time" content="2018-06-11T15:37:19.327Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/android.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/android-architecture.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/view-class.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/activity-lifecycle.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/fragment-lifecycle.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/activity-fragment-lifecycle.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/01_egypt_dribbble.gif">
+<meta property="og:updated_time" content="2019-03-28T04:21:40.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 基础知识总结">
 <meta name="twitter:description" content="以“一问一答”的形式总结记录自己在android学习过程中的重要知识点，让知识更清晰，便于记忆与理解，也有助于以后各种android相关的笔试、面试。  Android主要是参考了李刚老师的《Android疯狂讲义》总结的android基础知识。">
-<meta name="twitter:image" content="http://7xjda2.com1.z0.glb.clouddn.com/005/android.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/android.jpg">
 
 
 
@@ -430,29 +430,29 @@
 
       
         <p>以“一问一答”的形式总结记录自己在android学习过程中的重要知识点，让知识更清晰，便于记忆与理解，也有助于以后各种android相关的笔试、面试。</p>
-<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/005/android.jpg" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/android.jpg" alt=""></p>
 <p><center><em>Android</em></center><br><em>主要是参考了李刚老师的《Android疯狂讲义》总结的android基础知识。</em><br><a id="more"></a></p>
 <ol>
-<li><p>系统体系结构<br>由五部分组成：1.应用程序层 2.应用程序框架 3.函数库 4.Android运行时 5.Linux内核<br>一张图说明问题。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/005/android-architecture.jpg" alt="">  </p>
+<li><p>系统体系结构<br>由五部分组成：1.应用程序层 2.应用程序框架 3.函数库 4.Android运行时 5.Linux内核<br>一张图说明问题。<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/android-architecture.jpg" alt="">  </p>
 </li>
 <li><p>四大组件<br>(1)Activity：为Android应用提供可视化的用户界面<br>(2)Service：为其他组件提供后台服务或监控其它组件的运行状态，通常后台运行，没有图形用户界面<br>(3)BroadcastReceiver：全局监听器，用于监听系统广播消息<br>(4)ContentProvider：跨应用的数据交换，与ContentResolver结合使用  </p>
 </li>
-<li><p>UI组件总结<br>一直苦于android“丰富”的UI组件，特此总结一番。（不妨测试一下自己，你都认识吗？）<br>① 布局管理器<br>LinearLayout(线性布局)、TableLayout(表格布局)、FrameLayout(帧布局)、RelativeLayout(相对布局)、GridLayout(网格布局)、AbsoluteLayout(绝对布局)<br>② TextView及其子类<br>TextView(文本框)、EditText(编辑框)、Button(按钮)、CheckedTextView(检查的文本框)、RadioButton(单选按钮)、CheckBox(复选框)、ToggleButton(状态开关按钮)、Switch(开关)、AnalogClock(模拟时钟)、DigitalClock(数字时钟)、Chronometer(计时器)、AutoCompleteTextView(自动完成文本框)、MultiAutoCompleteTextView(允许输入多个提示项)、ExtractEditText(提供全屏输入法支持)<br>③ ImageView及其子类<br>ImageView(图片框)、ImageButton(图片按钮)、ZoomButton(“放大”或“缩小”按钮，ZoomControls提供“放大”“缩小”组合按钮)、QuickContactBadge(显示关联到指定联系人的图片)<br>④ AdapterView及其子类<br>AdapterView、AbsListView、AbsSpinner、AdapterViewAnimator(均为抽象类)、ListView(列表视图、一列)、GridView(网格视图、多列)、ExpandableListView(可展开的列表组件)、Spinner(下拉列表选择框、垂直)、Gallery(画廊视图、水平的列表选择框)、AdapterViewFlipper(带有自动播放、渐影渐显效果)、StackView(堆叠的图片)<br>⑤ ProgressBar及其子类<br>ProgressBar(进度条)、SeekBar(拖动条)、RatingBar(星级评分条)<br>⑥ ViewAnimator及其子类<br>ViewAnimator(增加动画效果)、ViewSwitcher(视图切换)、ImageSwitcher(图像切换器)、TextSwitcher(文本切换器)、ViewFlipper(类似于AdapterViewFlipper)<br>⑦ 杂项<br>Toast(提示信息)、CalendarView(日历视图)、DatePicker(日期选择器)、TimePicker(时间选择器)、NumberPicker(数值选择器)、SearchView(搜索框)、TabHost(选项条)、ScrollView(滚动视图)、HorizontolScrollView(水平滚动条)、Notification(状态通知)<br>⑧ 对话框<br>AlertDialog(对话框)、ProgressDialog(进度对话框)、DatePickerDialog(日期选择对话框)、TimePickerDialog(时间选择对话框)、PopupWindow(对话框风格的窗口)<br>图片是eclipse下View类的继承关系（快捷键Ctrl+T，android版本为4.4.2）的截图。<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/005/view-class.jpg" alt="">  </p>
+<li><p>UI组件总结<br>一直苦于android“丰富”的UI组件，特此总结一番。（不妨测试一下自己，你都认识吗？）<br>① 布局管理器<br>LinearLayout(线性布局)、TableLayout(表格布局)、FrameLayout(帧布局)、RelativeLayout(相对布局)、GridLayout(网格布局)、AbsoluteLayout(绝对布局)<br>② TextView及其子类<br>TextView(文本框)、EditText(编辑框)、Button(按钮)、CheckedTextView(检查的文本框)、RadioButton(单选按钮)、CheckBox(复选框)、ToggleButton(状态开关按钮)、Switch(开关)、AnalogClock(模拟时钟)、DigitalClock(数字时钟)、Chronometer(计时器)、AutoCompleteTextView(自动完成文本框)、MultiAutoCompleteTextView(允许输入多个提示项)、ExtractEditText(提供全屏输入法支持)<br>③ ImageView及其子类<br>ImageView(图片框)、ImageButton(图片按钮)、ZoomButton(“放大”或“缩小”按钮，ZoomControls提供“放大”“缩小”组合按钮)、QuickContactBadge(显示关联到指定联系人的图片)<br>④ AdapterView及其子类<br>AdapterView、AbsListView、AbsSpinner、AdapterViewAnimator(均为抽象类)、ListView(列表视图、一列)、GridView(网格视图、多列)、ExpandableListView(可展开的列表组件)、Spinner(下拉列表选择框、垂直)、Gallery(画廊视图、水平的列表选择框)、AdapterViewFlipper(带有自动播放、渐影渐显效果)、StackView(堆叠的图片)<br>⑤ ProgressBar及其子类<br>ProgressBar(进度条)、SeekBar(拖动条)、RatingBar(星级评分条)<br>⑥ ViewAnimator及其子类<br>ViewAnimator(增加动画效果)、ViewSwitcher(视图切换)、ImageSwitcher(图像切换器)、TextSwitcher(文本切换器)、ViewFlipper(类似于AdapterViewFlipper)<br>⑦ 杂项<br>Toast(提示信息)、CalendarView(日历视图)、DatePicker(日期选择器)、TimePicker(时间选择器)、NumberPicker(数值选择器)、SearchView(搜索框)、TabHost(选项条)、ScrollView(滚动视图)、HorizontolScrollView(水平滚动条)、Notification(状态通知)<br>⑧ 对话框<br>AlertDialog(对话框)、ProgressDialog(进度对话框)、DatePickerDialog(日期选择对话框)、TimePickerDialog(时间选择对话框)、PopupWindow(对话框风格的窗口)<br>图片是eclipse下View类的继承关系（快捷键Ctrl+T，android版本为4.4.2）的截图。<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/view-class.jpg" alt="">  </p>
 </li>
 <li><p>常用四种适配器<br>(1)BaseAdapter<br>(2)ArrayAdapter<br>(3)SimpleAdapter<br>(4)SimpleCursorAdapter  </p>
 </li>
 <li><p>Handler的使用步骤  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Loop.prepare();//为当前线程创建Looper对象，同时也创建了与之配套的MessengerQueue。  </span><br><span class="line">handler = new Handler() &#123;  </span><br><span class="line">	@override  </span><br><span class="line">	public void handleMessage(Message msg) &#123;  </span><br><span class="line">		//负责处理来自于其他线程的消息  </span><br><span class="line">	&#125;  </span><br><span class="line">&#125;;  </span><br><span class="line">Looper.loop();//启动Looper  </span><br><span class="line">//注：主UI线程可以直接创建Handler对象，系统已初始化了一个Looper对象。</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>Activity的7个生命周期<br>(1)onCreate()<br>(2)onStart()<br>(3)onResume()<br>(4)onRestart()<br>(5)onPause()<br>(6)onStop()<br>(7)onDestroy()<br>具体例子：<br>①第一次创建Activity：onCreate()、onStart()、onResume()<br>②按home键：onPause()、onStop()<br>③再回到应用：onRestart()、onStart()、onResume()<br>④跳转新Activity然后回到原Activity、屏幕锁屏再解锁：与按home键然后回到应用一样<br>⑤旋转屏幕：onPause()、onStop()、onDestroy()、onCreate()、onStart()、onResume()<br>⑥返回键退出应用：onPause()、onStop()、onDestroy()<br>此处引用一张官网的Activity生命周期图：<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/005/activity-lifecycle.png" alt="">  </p>
+<li><p>Activity的7个生命周期<br>(1)onCreate()<br>(2)onStart()<br>(3)onResume()<br>(4)onRestart()<br>(5)onPause()<br>(6)onStop()<br>(7)onDestroy()<br>具体例子：<br>①第一次创建Activity：onCreate()、onStart()、onResume()<br>②按home键：onPause()、onStop()<br>③再回到应用：onRestart()、onStart()、onResume()<br>④跳转新Activity然后回到原Activity、屏幕锁屏再解锁：与按home键然后回到应用一样<br>⑤旋转屏幕：onPause()、onStop()、onDestroy()、onCreate()、onStart()、onResume()<br>⑥返回键退出应用：onPause()、onStop()、onDestroy()<br>此处引用一张官网的Activity生命周期图：<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/activity-lifecycle.png" alt="">  </p>
 </li>
-<li><p>Fragment的11个生命周期<br>引用两张官网的图。<br>Fragment生命周期：<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/005/fragment-lifecycle.png" alt=""><br>Fragment与Activity的生命周期关系：<br><img src="http://7xjda2.com1.z0.glb.clouddn.com/005/activity-fragment-lifecycle.png" alt="">  </p>
+<li><p>Fragment的11个生命周期<br>引用两张官网的图。<br>Fragment生命周期：<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/fragment-lifecycle.png" alt=""><br>Fragment与Activity的生命周期关系：<br><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/activity-fragment-lifecycle.png" alt="">  </p>
 </li>
 <li><p>HttpClient的用法<br>HttpClient就是一个增强版的HttpURLConnection<br>(1)创建HttpClient对象。<br>(2)创建请求方法的实例，并指定请求URL。如果需要发送GET请求，创建HttpGet对象；如果需要发送POST请求，创建HttpPost对象。<br>(3)如果需要发送请求参数，可调用HttpGet、HttpPost共同的setParams(HetpParams params)方法来添加请求参数；对于HttpPost对象而言，也可调用setEntity(HttpEntity entity)方法来设置请求参数。<br>(4)调用HttpClient对象的execute(HttpUriRequest request)发送请求，该方法返回一个HttpResponse。<br>(5)调用HttpResponse的getAllHeaders()、getHeaders(String name)等方法可获取服务器的响应头；调用HttpResponse的getEntity()方法可获取HttpEntity对象，该对象包装了服务器的响应内容。程序可通过该对象获取服务器的响应内容。  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//简单用法：从一个网络URL获取字符串数据  </span><br><span class="line">String url = &quot;http://zyfree.acman.cn/&quot;;  </span><br><span class="line">HttpClient client = new DefaultHttpClient();  </span><br><span class="line">HttpGet get = new HttpGet(url);  </span><br><span class="line">try &#123;  </span><br><span class="line">	HttpResponse response = client.execute(get);  </span><br><span class="line">	HttpEntity entity = response.getEntity();  </span><br><span class="line">	String result = EntityUtils.toString(entity);  </span><br><span class="line">&#125; catch (Exception e) &#123;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><img src="http://7xjda2.com1.z0.glb.clouddn.com/005/01_egypt_dribbble.gif" alt=""><br><em>注：图片来自于<a href="https://dribbble.com/shots/2146710-Egypt-emoG" target="_blank" rel="noopener">Dribbble</a>。</em>  </p>
+<p><img src="https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/005/01_egypt_dribbble.gif" alt=""><br><em>注：图片来自于<a href="https://dribbble.com/shots/2146710-Egypt-emoG" target="_blank" rel="noopener">Dribbble</a>。</em>  </p>
 <p><em>————————原创文章，未经许可，请勿转载！！！————————</em></p>
 
       
@@ -741,7 +741,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
