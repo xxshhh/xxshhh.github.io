@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xxshhh.com/"/>
-  <updated>2019-04-07T18:09:46.089Z</updated>
+  <updated>2019-08-07T15:26:06.693Z</updated>
   <id>http://xxshhh.com/</id>
   
   <author>
@@ -18,15 +18,15 @@
   
   <entry>
     <title>JavaScript 高级程序设计 - 读书笔记(上)</title>
-    <link href="http://xxshhh.com/2019/04/07/017-professional-javascript-for-web-part-one/"/>
-    <id>http://xxshhh.com/2019/04/07/017-professional-javascript-for-web-part-one/</id>
+    <link href="http://xxshhh.com/2019/04/07/018-professional-javascript-for-web-part-one/"/>
+    <id>http://xxshhh.com/2019/04/07/018-professional-javascript-for-web-part-one/</id>
     <published>2019-04-07T15:29:59.000Z</published>
-    <updated>2019-04-07T18:09:46.089Z</updated>
+    <updated>2019-08-07T15:26:06.693Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;这可能是 JavaScript 最好的基础书了！每次翻阅都会有新的收获。特此做个完整的读书笔记来巩固基础，加深印象~&lt;br&gt;全书 700 多页，共 25 章。读书笔记分为上(1-7章)、中(8-16章)、下(17-25章)三个部分。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/017/Professional-JavaScript-for-Web.jpg&quot; alt=&quot;JavaScript 高级程序设计&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/018/Professional-JavaScript-for-Web.jpg&quot; alt=&quot;JavaScript 高级程序设计&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;em&gt;JavaScript 高级程序设计&lt;/em&gt;&lt;/center&gt;&lt;br&gt;
     
     </summary>
@@ -41,6 +41,27 @@
       <category term="es5" scheme="http://xxshhh.com/tags/es5/"/>
     
       <category term="h5" scheme="http://xxshhh.com/tags/h5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端学习分享</title>
+    <link href="http://xxshhh.com/2018/04/20/017-front-end-learning/"/>
+    <id>http://xxshhh.com/2018/04/20/017-front-end-learning/</id>
+    <published>2018-04-20T02:47:00.000Z</published>
+    <updated>2019-08-07T15:33:40.280Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;大前端的概念&quot;&gt;&lt;a href=&quot;#大前端的概念&quot; class=&quot;headerlink&quot; title=&quot;大前端的概念&quot;&gt;&lt;/a&gt;大前端的概念&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/xxshhh/image-hosting/blog/017/developer.jpg&quot; alt=&quot;developer&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在软件系统中，通俗意义上来说，和用户直接打交道的那部分叫&lt;strong&gt;”前端（front-end）“&lt;/strong&gt;，而用户看不到的那部分就叫&lt;strong&gt;”后端（back-end）“&lt;/strong&gt;。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="经验" scheme="http://xxshhh.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+      <category term="JavaScript" scheme="http://xxshhh.com/tags/JavaScript/"/>
     
   </entry>
   
